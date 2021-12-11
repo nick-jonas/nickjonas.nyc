@@ -106,7 +106,7 @@ body {
   justify-content: right;
   gap: 30px;
   flex-basis: 66%;
-  max-height: 1120px;
+  max-height: 1400px;
 }
 .item.content {
   border-top: 3px solid #1b1b1b;

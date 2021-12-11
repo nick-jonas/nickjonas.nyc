@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Boogy_Brut_Poster_WEB-White';
+    src:    url('Boogy_Brut_Poster_WEB-White.eot');
+    src:    url('Boogy_Brut_Poster_WEB-White.eot?#iefix') format('embedded-opentype'),
+            url('Boogy_Brut_Poster_WEB-White.woff') format('woff'),
+            url('Boogy_Brut_Poster_WEB-White.woff2') format('woff2');
+}
