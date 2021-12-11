@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Boogy_Brut_WEBL-Medium';
+    src:    url('Boogy_Brut_WEBL-Medium.eot');
+    src:    url('Boogy_Brut_WEBL-Medium.eot?#iefix') format('embedded-opentype'),
+            url('Boogy_Brut_WEBL-Medium.woff') format('woff'),
+            url('Boogy_Brut_WEBL-Medium.woff2') format('woff2');
+}

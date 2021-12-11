@@ -1,0 +1,28 @@
+{
+  "name": "nick-jonas-nyc",
+  "description": "Nick Jonas, Product Designer",
+  "version": "0.0.2",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Nick Jonas",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "watch-css": "stylus -w stylus/ -o public/css",
+    "dev": "",
+    "test": "mocha --exit test/*.test.js",
+    "start": "node app.js & npm run watch-css",
+    "start-prod": "node app.js",
+    "build": "stylus stylus/ -c -o public/css",
+    "deploy": "gcloud app deploy"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.0",
+    "supertest": "^6.0.0"
+  }
+}
