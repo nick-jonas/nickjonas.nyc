@@ -13,4 +13,3 @@
 
 runtime: nodejs
 env: flex
-entrypoint: npm run start-prod
