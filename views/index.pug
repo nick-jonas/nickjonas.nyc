@@ -23,7 +23,7 @@ html(lang="en")
         .text-wrap
           .title Hi
           .content I have a constant drive to discover the most interesting and important problems to solve.  I want to bring my experience and expertise to diverse teams in an effort to reduce the most complex problems into elegant solutions using a human-centered design approach.
-          .content My career has been standing on the shoulders of giants, so it’s only fair to reference them here:
+          .content My career has been standing on the shoulders of giants, so here are some of their quotes that ring true for me:
           ul
             li “Unless you begin with an interesting problem, it is unlikely you will end up with an interesting solution.” - Bob Gill
             li “If I had 60 minutes to solve a problem, I’d spend 55 minutes defining it, and 5 minutes solving it. ” - Albert Einstein
@@ -36,7 +36,7 @@ html(lang="en")
         .title Work
         .entry
           .title 
-            a(href='mailto:njonas45@gmail.com') Please reach out to view my portfolio.
+            a(class="mail" href='mailto:njonas45@badmail.gmail.com') Please reach out to view my portfolio.
         .entry 
           .text-wrap
             .title March 2019 - Present
@@ -131,27 +131,48 @@ html(lang="en")
             .content September 2005 - 2009
       
 
-      .item.content.experiments
+      .item.content.personal
         .title Personal
-        .entry
+        .entry#chair
+          .preview 
+            img(src='/static/img/chair-preview.jpg')
           .text-wrap
             .title The Spanish Chair <span class="light">- 2021</span>
             .content Reproduced the Spanish chair by <a href='https://en.wikipedia.org/wiki/B%C3%B8rge_Mogensen' target='_blank'>Børge Mogensen</a> using veg-tan leather, walnut wood, and brass hardware. 
         
-        .entry
+        .entry#studio
+          .preview 
+            img(src='/static/img/studio-preview-3.jpg')
           .text-wrap
             .title The Shop <span class="light">- 2020</span>
             .content In the midst of the pandemic, <a href='https://erezhorovitz.com/' target='_blank'>Erez Horovitz</a> and I built a fabrication/woodworking studio in Greenpoint, Brooklyn. 
 
-        .entry
+        .entry#cabin
+          .preview 
+            img(src='/static/img/cabin.jpg')
+          .text-wrap
+            .title The Cabin <span class="light">- 2018</span>
+            .content I gut-renovated an old, derelict A-Frame in Gardiner, New York, and gave it a second life as a rental for those seeking respite from the&nbsp;city.
+
+        .entry#table
+          .preview 
+              img(src='/static/img/table-preview.jpg')
           .text-wrap
             .title The Table <span class="light">- 2016</span>
-            .content Inspired by the work of <a href='https://en.wikipedia.org/wiki/George_Nakashima' target='_blank'>George Nakashima</a>, I designed and built a live-edge coffee table from a slab of a cherry tree, with walnut butterfly inlays and turned legs.
+            .content Inspired by the work of <a href='https://en.wikipedia.org/wiki/George_Nakashima' target='_blank'>George Nakashima</a>, I designed and built a 6' live-edge coffee table from a slab of a cherry tree, with walnut butterfly inlays and turned legs.
 
-        .entry
+        .entry#raincheck
+          .preview 
+                img(src='/static/img/raincheck.jpg')
           .text-wrap
             .title Raincheck <span class="light">- 2015</span>
-            .content Raincheck is an umbrella stand that knows when it will rain. It indicates the chance of rain, snow, and extreme conditions through subtle illuminated indicators.
+            .content I designed, patented, and built Raincheck – an umbrella stand that knows when it will rain. It indicates the chance of rain, snow, and extreme conditions through subtle illuminated indicators inside a solid walnut housing.
   
-  script(src='/static/js/anime.min.js')
+      .item.content.contact
+        .title Contact
+        .entry
+          .text-wrap
+            .title Email
+            .content njonas45[at]gmail[dot]com
+
   script(src='/static/js/main.js')

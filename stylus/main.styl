@@ -2,12 +2,13 @@
 @import fonts
 @import animations
 
+$isAnimated = true
 $yellow = #91c840
 $off-black = #202020
 $off-white = #f9f9f9
 $grid-gap = 30px
 $easeInOutQuart = cubic-bezier(0.76, 0, 0.24, 1)
-$globalDelay = 2.4s
+$globalDelay = $isAnimated ? 2.2s : 0
 
 *
     box-sizing border-box
@@ -53,22 +54,25 @@ body
             position absolute
             top -28px
             left 0
-            transform:scaleX(0)
             transform-origin: top left
-            animation-name: scale-horizontal
             animation-duration: 1.9s
             animation-timing-function: $easeInOutQuart
             animation-fill-mode: forwards
             animation-delay: $globalDelay
+            transform:scaleX(1)
+            if $isAnimated
+                transform:scaleX(0)
+                animation-name: scale-horizontal
                 
     .title
         font-family: 'Boogy_Brut_WEBL-Medium'
         letter-spacing:-1px
         font-size:1.1em
-        animation-name: fade-in
         animation-duration: 1s
-        opacity:0
         animation-fill-mode: forwards
+        if $isAnimated
+            opacity:0
+            animation-name: fade-in
 
     .subtitle
         font-family: 'Boogy_Brut_WEBL-Light'
@@ -76,24 +80,26 @@ body
         font-size:1.0em
         max-width: 380px
         display: block
-        animation-name: fade-in
         animation-duration: 1s
         animation-delay: 1s
-        opacity:0
         animation-fill-mode: forwards
+        if $isAnimated
+            opacity:0
+            animation-name: fade-in
 
 
 .item.hello
-    clip-path: inset(0px 1000px 0px 0px);
     animation-duration: 0.8s
     animation-fill-mode: forwards    
     animation-timing-function: $easeInOutQuart
-    animation-name: mask-horizontal
     animation-delay: $globalDelay
     position:relative
     border-top:3px solid $off-black
     flex-basis 30%
     margin:0px 0px 0px 0px
+    if $isAnimated
+        clip-path: inset(0px 1000px 0px 0px);
+        animation-name: mask-horizontal
 
     .entry 
         .title
@@ -117,7 +123,7 @@ body
         li:last-child
             padding-bottom:0
         li
-            padding:8px 0
+            padding:13px 0
 
 
 
@@ -137,37 +143,79 @@ body
     for num in (1..30)
       &:nth-child({num}) 
         animation-delay: 100ms * num + 450 + $globalDelay;
-    clip-path: inset(0px 400px 0px 0px);
     animation-duration: 0.6s
     animation-fill-mode: forwards    
     animation-timing-function: $easeInOutQuart
-    animation-name: mask-horizontal
-    
+    if $isAnimated
+        animation-name: mask-horizontal
+        clip-path: inset(0px 400px 0px 0px);
     border-top:3px solid $off-black
     width "calc(33% - %s)" % $grid-gap
     margin: 0 1rem 1rem 0
     position relative
-    overflow hidden
+    // overflow:hidden
+    z-index: 0
+    &.personal
+        z-index: 1
     > .title
         font-family: 'Boogy_Brut_WEBL-Medium'
         font-size:0.6em
         padding:14px 0
     .entry
-        opacity:0
         for num in (1..30)
             &:nth-child({num}) 
-                animation-delay: 80ms * num + 1450 + $globalDelay;
+                animation-delay: 80ms * num + 1450 + $globalDelay
         animation-duration: 0.85s
         animation-fill-mode: forwards    
         animation-timing-function: $easeInOutQuart
-        animation-name: fade-in
-
+        if $isAnimated
+            opacity:0
+            animation-name: fade-in
         font-size:0.4em
         padding:10px 0
         display:flex
         flex-direction:column
         flex-wrap:nowrap
+        .preview
+            pointer-events:none
+            position:fixed
+            top:0
+            left:0
+            opacity:0
+            display: none
+            border: 5px solid $off-black
+            transition-property: transform
+            transition-duration: 0.3s
+            max-width:650px
+            z-index:0
+            img
+                display: block
+                max-width:100%
+            &.on
+                display:block
+                opacity:1
         .text-wrap
+            position:relative
+            z-index: -1
+            pointer-events:none
+            color: $off-black
+            opacity:1
+            &.focus
+                &:before
+                    content: ''
+                    background:rgba(0,0,0,0.5)
+                    position:absolute;
+                    top:-10px
+                    left:-10px
+                    width:calc(100% + 20px)
+                    height:calc(100% + 20px)
+                    z-index:-1
+                z-index:1
+                color: #FFF
+                opacity: 1
+                a
+                    color: #FFF
+                    pointer-events:auto
             .title
                 font-family: 'Boogy_Brut_WEBL-Bold'
             .content
@@ -177,6 +225,8 @@ body
         font-style: italic
         font-family: 'Boogy_Brut_WEBL-Light'
         padding:10px 0
+    &.hide .text-wrap
+        z-index:-1
 
 
 
@@ -187,7 +237,7 @@ body
     }
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 960px){
     .content-container{
         max-height:2000px
     }
@@ -195,6 +245,16 @@ body
         width "calc(50% - %s)" % $grid-gap
     }
 }
+
+@media screen and (max-width: 800px){
+    .content-container{
+        max-height:2600px
+    }
+    .item.content{
+        width "calc(50% - %s)" % $grid-gap
+    }
+}
+
 
 @media screen and (max-width: 620px){
     body{
