@@ -1,10 +1,13 @@
 @import reset
 @import fonts
+@import animations
 
 $yellow = #91c840
 $off-black = #202020
 $off-white = #f9f9f9
 $grid-gap = 30px
+$easeInOutQuart = cubic-bezier(0.76, 0, 0.24, 1)
+$globalDelay = 2.4s
 
 *
     box-sizing border-box
@@ -30,7 +33,7 @@ body
 
 .parent-container
     max-width: 1480px
-    border-top: 10px solid $off-black
+    border-top: 10px solid $off-white
     padding-top: 18px
     display: flex
     flex-flow: row wrap
@@ -42,10 +45,30 @@ body
     > .header
         flex-basis 100%
         padding-bottom: 150px
+        position:relative
+        .top-bar
+            background-color $off-black
+            width 100%
+            height 10px
+            position absolute
+            top -28px
+            left 0
+            transform:scaleX(0)
+            transform-origin: top left
+            animation-name: scale-horizontal
+            animation-duration: 1.9s
+            animation-timing-function: $easeInOutQuart
+            animation-fill-mode: forwards
+            animation-delay: $globalDelay
+                
     .title
         font-family: 'Boogy_Brut_WEBL-Medium'
         letter-spacing:-1px
         font-size:1.1em
+        animation-name: fade-in
+        animation-duration: 1s
+        opacity:0
+        animation-fill-mode: forwards
 
     .subtitle
         font-family: 'Boogy_Brut_WEBL-Light'
@@ -53,60 +76,48 @@ body
         font-size:1.0em
         max-width: 380px
         display: block
+        animation-name: fade-in
+        animation-duration: 1s
+        animation-delay: 1s
+        opacity:0
+        animation-fill-mode: forwards
 
-
-@keyframes box {
-    from {
-        transform:scaleY(1)
-    }
-    to {
-        transform:scaleY(0)
-    }
-}
 
 .item.hello
+    clip-path: inset(0px 1000px 0px 0px);
+    animation-duration: 0.8s
+    animation-fill-mode: forwards    
+    animation-timing-function: $easeInOutQuart
+    animation-name: mask-horizontal
+    animation-delay: $globalDelay
     position:relative
-    .box 
-        background:$off-white
-        position:absolute
-        top:0
-        left:0
-        width:100%
-        height:500px
-        z-index:1
-        animation-name:box
-        animation-duration:0.9s
-        animation-fill-mode:forwards
-        animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-        transform-origin:top center
-        
-        
     border-top:3px solid $off-black
     flex-basis 30%
     margin:0px 0px 0px 0px
-    .title
-        color: $yellow  
-        font-family: 'Boogy_Brut_Poster_WEB-White'
-        font-size:2.4em
-        padding-bottom:0
 
     .entry 
-        font-size 0.4em
+        .title
+            color: $yellow  
+            font-family: 'Boogy_Brut_Poster_WEB-White'
+            font-size:2.4em
+            padding-bottom:0
         .content
+            font-size 0.4em
             padding:10px 0
             font-family: 'Boogy_Brut_WEBL-Regular'
-    ul
-        font-family: 'Boogy_Brut_WEBL-Regular'
-        color: #666
-        border-left:4px solid #CCC
-        margin-top:30px
-        padding-left:30px
-    li:first-child
-        padding-top:0
-    li:last-child
-        padding-bottom:0
-    li
-        padding:8px 0
+        ul
+            font-family: 'Boogy_Brut_WEBL-Regular'
+            font-size 0.4em
+            color: #666
+            border-left:4px solid #CCC
+            margin-top:30px
+            padding-left:30px
+        li:first-child
+            padding-top:0
+        li:last-child
+            padding-bottom:0
+        li
+            padding:8px 0
 
 
 
@@ -120,32 +131,16 @@ body
     max-height: 1400px
 
 
-@keyframes mask-horizontal {
-    from {
-        clip-path: inset(0px 400px 0px 0px);
-    }
-    to {
-        clip-path: inset(0px 0px 0px 0px);
-    }
-}
 
-@keyframes fade-in {
-    from {
-        opacity:0
-    }
-    to {
-        opacity:1
-    }
-}
 
 .item.content
     for num in (1..30)
       &:nth-child({num}) 
-        animation-delay: 100ms * num + 450;
+        animation-delay: 100ms * num + 450 + $globalDelay;
     clip-path: inset(0px 400px 0px 0px);
     animation-duration: 0.6s
     animation-fill-mode: forwards    
-    animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1)
+    animation-timing-function: $easeInOutQuart
     animation-name: mask-horizontal
     
     border-top:3px solid $off-black
@@ -161,10 +156,10 @@ body
         opacity:0
         for num in (1..30)
             &:nth-child({num}) 
-                animation-delay: 80ms * num + 1450;
+                animation-delay: 80ms * num + 1450 + $globalDelay;
         animation-duration: 0.85s
         animation-fill-mode: forwards    
-        animation-timing-function: cubic-bezier(0.5, 1, 0.89, 1)
+        animation-timing-function: $easeInOutQuart
         animation-name: fade-in
 
         font-size:0.4em
