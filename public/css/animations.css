@@ -1,1 +1,96 @@
-@-moz-keyframes mask-horizontal{from{clip-path:inset(0 400px 0 0)}to{clip-path:inset(0 0 0 0)}}@-webkit-keyframes mask-horizontal{from{clip-path:inset(0 400px 0 0)}to{clip-path:inset(0 0 0 0)}}@-o-keyframes mask-horizontal{from{clip-path:inset(0 400px 0 0)}to{clip-path:inset(0 0 0 0)}}@keyframes mask-horizontal{from{clip-path:inset(0 400px 0 0)}to{clip-path:inset(0 0 0 0)}}@-moz-keyframes fade-in{from{opacity:0}to{opacity:1}}@-webkit-keyframes fade-in{from{opacity:0}to{opacity:1}}@-o-keyframes fade-in{from{opacity:0}to{opacity:1}}@keyframes fade-in{from{opacity:0}to{opacity:1}}@-moz-keyframes scale-horizontal{from{transform:scaleX(0)}to{transform:scaleX(1)}}@-webkit-keyframes scale-horizontal{from{transform:scaleX(0)}to{transform:scaleX(1)}}@-o-keyframes scale-horizontal{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes scale-horizontal{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@-moz-keyframes mask-horizontal {
+  from {
+    clip-path: inset(0px 400px 0px 0px);
+  }
+  to {
+    clip-path: inset(0px 0px 0px 0px);
+  }
+}
+@-webkit-keyframes mask-horizontal {
+  from {
+    clip-path: inset(0px 400px 0px 0px);
+  }
+  to {
+    clip-path: inset(0px 0px 0px 0px);
+  }
+}
+@-o-keyframes mask-horizontal {
+  from {
+    clip-path: inset(0px 400px 0px 0px);
+  }
+  to {
+    clip-path: inset(0px 0px 0px 0px);
+  }
+}
+@keyframes mask-horizontal {
+  from {
+    clip-path: inset(0px 400px 0px 0px);
+  }
+  to {
+    clip-path: inset(0px 0px 0px 0px);
+  }
+}
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes scale-horizontal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes scale-horizontal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@-o-keyframes scale-horizontal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes scale-horizontal {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

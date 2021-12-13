@@ -1,1 +1,25 @@
-@font-face{font-family:'Boogy_Brut_WEBL-Bold';src:url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.eot");src:url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.eot?#iefix") format('embedded-opentype'),url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.woff") format('woff'),url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.woff2") format('woff2')}@font-face{font-family:'Boogy_Brut_WEBL-Medium';src:url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.eot");src:url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.eot?#iefix") format('embedded-opentype'),url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.woff") format('woff'),url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.woff2") format('woff2')}@font-face{font-family:'Boogy_Brut_WEBL-Regular';src:url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.eot");src:url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.eot?#iefix") format('embedded-opentype'),url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.woff") format('woff'),url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.woff2") format('woff2')}@font-face{font-family:'Boogy_Brut_WEBL-Light';src:url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.eot");src:url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.eot?#iefix") format('embedded-opentype'),url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.woff") format('woff'),url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.woff2") format('woff2')}@font-face{font-family:'Boogy_Brut_Poster_WEB-White';src:url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.eot");src:url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.eot?#iefix") format('embedded-opentype'),url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.woff") format('woff'),url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.woff2") format('woff2')}
+@font-face {
+  font-family: 'Boogy_Brut_WEBL-Bold';
+  src: url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.eot");
+  src: url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.woff") format('woff'), url("../fonts/WEB-BoogyBrut-Bold/WEB-Reduced_version/Boogy_Brut_WEBL-Bold.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Boogy_Brut_WEBL-Medium';
+  src: url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.eot");
+  src: url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.eot?#iefix") format('embedded-opentype'), url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.woff") format('woff'), url("../fonts/WEB-BoogyBrut-Medium/WEB-Reduced_version/Boogy_Brut_WEBL-Medium.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Boogy_Brut_WEBL-Regular';
+  src: url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.eot");
+  src: url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.woff") format('woff'), url("../fonts/WEB-BoogyBrut-Regular/WEB-Reduced_version/Boogy_Brut_WEBL-Regular.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Boogy_Brut_WEBL-Light';
+  src: url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.eot");
+  src: url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.eot?#iefix") format('embedded-opentype'), url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.woff") format('woff'), url("../fonts/WEB-BoogyBrut-Light/WEB-Reduced_version/Boogy_Brut_WEBL-Light.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'Boogy_Brut_Poster_WEB-White';
+  src: url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.eot");
+  src: url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.eot?#iefix") format('embedded-opentype'), url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.woff") format('woff'), url("../fonts/WEB-BoogyBrutPoster-White/WEB-Full_version/Boogy_Brut_Poster_WEB-White.woff2") format('woff2');
+}
