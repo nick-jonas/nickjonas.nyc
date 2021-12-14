@@ -31,7 +31,9 @@ window.onload = () => {
             // hide all except the focused one
             previewImage.parentElement.parentElement.querySelectorAll('.entry').forEach((elem) => {
                 if(elem !== previewImage.parentElement){
-                    previewImage.parentElement.parentElement.classList.add('hide');
+                    elem.classList.add('hide');
+                }else{
+                    elem.classList.remove('hide');
                 }
             });
 
@@ -41,7 +43,7 @@ window.onload = () => {
         imagePreviewElem.addEventListener('mouseout', (e) => {
             previewImage.parentElement.querySelector('.text-wrap').classList.remove('focus');
             previewImage.parentElement.parentElement.querySelectorAll('.entry').forEach((elem) => {
-                previewImage.parentElement.parentElement.classList.remove('hide');
+                previewImage.parentElement.classList.remove('hide');
             });
             previewImage.classList.remove('on');
             previewImage = null;

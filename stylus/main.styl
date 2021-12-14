@@ -176,6 +176,10 @@ body
         display:flex
         flex-direction:column
         flex-wrap:nowrap
+        z-index:1
+        position:relative
+        &.hide
+            z-index:0
         .preview
             pointer-events:none
             position:fixed
@@ -225,8 +229,6 @@ body
         font-style: italic
         font-family: 'Boogy_Brut_WEBL-Light'
         padding:10px 0
-    &.hide .text-wrap
-        z-index:-1
 
 
 
