@@ -7,10 +7,10 @@ html(lang="en")
     meta(name='description', content='Portfolio of a product designer & creative technologist')
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
-    meta(property="og:title" content="Nick Jonas")
-    meta(property="og:url" content="www.nickjonas.nyc")
-    meta(property="og:image" content="http://nickjonas.nyc/static/img/profile.jpg")
-    meta(property="og:image:type" content="image/jpeg")
+    meta(name="title", property="og:title", content="Nick Jonas")
+    meta(property="og:url", content="www.nickjonas.nyc")
+    meta(name="image", property="og:image", content="http://nickjonas.nyc/static/img/profile.jpg")
+    meta(property="og:image:type", content="image/jpeg")
 
     link(rel="icon" href="/static/img/favicon.ico" sizes="any")
     link(rel="icon" href="/static/img/icon.svg" type="image/svg+xml")
@@ -35,8 +35,11 @@ html(lang="en")
           .content My career has been standing on the shoulders of giants, so here are some of their quotes that ring true for me:
           ul
             li “Unless you begin with an interesting problem, it is unlikely you will end up with an interesting solution.” - Bob Gill
-            li “If I had 60 minutes to solve a problem, I’d spend 55 minutes defining it, and 5 minutes solving it. ” - Albert Einstein
-            li “Don’t undertake a project unless it is manifestly important and nearly impossible.” - Edwin Land
+            li “Don’t undertake a project unless it is manifestly important and nearly impossible.” – Edwin Land
+            li "Enlightened trial and error succeeds over the planning of the lone genius." - David Kelley
+            li “The truest material for making new things isn’t aluminum or carbon fiber. It’s behavior.” – Robert Fabricant
+            li “Metaphors die in repeated use but leave behind the reality that they had languaged into being” – Klaus Krippendorff
+            li “This borderless-ness, or, if you prefer, confusion, is also crucial to what we consider progress.  As people invented new tools for new ways of living, they simultaneously created new realms of ignorance…when it comes to new technologies, incomplete understanding is empowering” – Elizabeth Kolbert
     
     
     .content-container
@@ -62,9 +65,10 @@ html(lang="en")
             .content Sr Creative Technologist
             .content Google Creative Lab - NYC
         .entry
-          .title May 2014 - December 2015
-          .content Product Design Lead
-          .content Google Accessories - NYC
+          .text-wrap
+            .title May 2014 - December 2015
+            .content Product Design Lead
+            .content Google Accessories - NYC
         .entry 
           .text-wrap
             .title February 2013 - August 2014
@@ -138,6 +142,17 @@ html(lang="en")
             .title University of California, Irvine
             .content BS, Informatics, School of Information & Computer Sciences
             .content September 2005 - 2009
+        .entry
+          .text-wrap 
+            .title Rhino 3D Modeling Level 1*
+            .content Online
+            .content 2021
+        .entry
+          .text-wrap 
+            .title Drawing for Product Design*
+            .content Pratt, School of Design
+            .content 2022
+        .entry.footnote *continued education
       
 
       .item.content.personal
