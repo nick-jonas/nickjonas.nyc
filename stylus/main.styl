@@ -86,6 +86,38 @@ body
         if $isAnimated
             opacity:0
             animation-name: fade-in
+    
+    .status
+        animation-duration: 1.9s
+        animation-timing-function: $easeInOutQuart
+        animation-fill-mode: forwards
+        animation-delay: $globalDelay + 1.9s
+        if $isAnimated
+            opacity:0
+            animation-name: fade-in
+        font-size: 0.4em
+        position: absolute
+        top: 0
+        right: 0
+        &::before
+            content: ''
+            width: 13px
+            height: 13px
+            border-radius: 50%
+            position: absolute
+            background: #25b725
+            left: -19px
+            top: 3px
+            animation-duration: 1.4s
+            animation-timing-function: $easeInOutQuart
+            animation-fill-mode: forwards
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            if $isAnimated
+                opacity:0
+                animation-name: fade-in
+            
+
 
 
 .item.hello
@@ -262,6 +294,11 @@ body
     body{
         padding: 25px
         font-size:3.0em
+    }
+    .parent-container .status{
+        position: relative;
+        left: 22px;
+        font-size: 0.3em;
     }
     .item.hello{
         flex-basis 100%
