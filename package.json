@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "author": "Nick Jonas",
   "engines": {
-    "node": ">=14.0.0"
+    "node": "16.x"
   },
   "scripts": {
     "watch-css": "stylus -w stylus/ -o public/css",
@@ -15,7 +15,7 @@
     "start-dev": "node app.js & npm run watch-css",
     "start": "node app.js",
     "build": "stylus stylus/ -c -o public/css",
-    "deploy": "gcloud app deploy"
+    "deploy": "gcloud app deploy --version v1"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "mocha": "^8.0.0",
+    "stylus": "^0.57.0",
     "supertest": "^6.0.0"
   }
 }
