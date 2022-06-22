@@ -14,8 +14,7 @@
     "test": "mocha --exit test/*.test.js",
     "start-dev": "node app.js & npm run watch-css",
     "start": "node app.js",
-    "build": "stylus stylus/ -c -o public/css",
-    "deploy": "gcloud app deploy --version v1"
+    "build": "stylus stylus/ -c -o public/css"
   },
   "dependencies": {
     "express": "^4.16.4",
